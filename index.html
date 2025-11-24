@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zyra AI • Crypto-Powered Personal Shopper</title>
+  <meta name="description" content="Text or voice a photo, link, or description. Zyra finds the best deal, buys with crypto or card. Zero spam, ever.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 100px 0;
+    }
+    h1 {
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 700;
+      background: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+    .tagline {
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      color: #aaa;
+      max-width: 600px;
+      margin-bottom: 3rem;
+      font-weight: 300;
+    }
+    .features {
+      display: grid;
+      gap: 2rem;
+      margin: 4rem 0;
+      text-align: left;
+    }
+    .feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid #222;
+    }
+    .feature:last-child { border-bottom: none; }
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(0, 255, 136, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .feature h3 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .feature p {
+      color: #aaa;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+    .mockup {
+      width: 100%;
+      max-width: 350px;
+      margin: 3rem auto;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 255, 136, 0.1);
+      border: 1px solid #333;
+    }
+    .mockup img { width: 100%; height: auto; display: block; }
+    .cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+    .btn {
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
+      color: #000;
+      box-shadow: 0 10px 20px rgba(0, 255, 136, 0.2);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px rgba(0, 255, 136, 0.3);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: #00ff88;
+      border: 2px solid #00ff88;
+    }
+    .btn-secondary:hover {
+      background: rgba(0, 255, 136, 0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 4rem 0 2rem;
+      color: #666;
+      font-size: 0.9rem;
+      border-top: 1px solid #222;
+    }
+    @media (max-width: 768px) {
+      header { padding: 60px 0; }
+      .features { margin: 2rem 0; gap: 1.5rem; }
+      .feature { flex-direction: column; align-items: flex-start; text-align: left; }
+      .cta { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Zyra AI</h1>
+      <p class="tagline">
+        Save time. Save money. Kill spam.<br>
+        Voice or text a photo, link, or idea. Zyra finds the best deal worldwide, buys with crypto or card — without ever sharing your email.
+      </p>
+      <div class="mockup">
+        <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7e87?w=800&q=80&fit=crop" alt="Zyra AI app demo: voice input and crypto checkout">
+      </div>
+      <div class="cta">
+        <a href="https://tally.so/r/nE2g2v" class="btn btn-primary" onclick="demoVoice()">🎤 Try Voice Demo</a>
+        <a href="https://tally.so/r/nE2g2v" class="btn btn-secondary">Join Waitlist</a>
+      </div>
+    </div>
+  </header>
+  <section class="container">
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">🎤</div>
+        <div>
+          <h3>Voice or Text Input</h3>
+          <p>Tap to speak: "Black Nike sneakers size 10 under $80." Or snap a photo. Zyra understands instantly — no typing required.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">₿</div>
+        <div>
+          <h3>Crypto Payments</h3>
+          <p>Seamless checkout with USDC, ETH, SOL, BTC, or card. Virtual one-time details keep you anonymous and spam-free. Powered by MoonPay.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🛒</div>
+        <div>
+          <h3>Global Best Deals</h3>
+          <p>Scans Amazon, eBay, AliExpress, and 100+ stores in real-time. Grabs coupons, compares shipping, and auto-buys from the winner.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    © 2025 Zyra AI • Built on Solana for privacy-first degens • <a href="https://github.com/ProjectAi-Sol/ZyraAI" style="color: #00ff88;">View Source</a>
+  </footer>
+  <script>
+    function demoVoice() {
+      if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        const recognition = new SpeechRecognition();
+        recognition.lang = 'en-US';
+        recognition.interimResults = false;
+        recognition.maxAlternatives = 1;
+        recognition.onresult = function(event) {
+          const transcript = event.results[0][0].transcript;
+          alert(`Zyra got it: "${transcript}"\n\nSearching best deals... (Demo mode – full bot coming soon!)`);
+        };
+        recognition.onerror = function() {
+          alert('Voice demo ready – but browser needs mic access. Try in Chrome/Safari.');
+        };
+        recognition.start();
+      } else {
+        alert('Voice demo: Imagine saying "buy me coffee under $5" – Zyra would hunt it now!');
+      }
+    }
+  </script>
+</body>
+</html>
